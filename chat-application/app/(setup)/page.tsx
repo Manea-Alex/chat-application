@@ -5,6 +5,8 @@ import { InitialModal } from "@/components/modals/initial-modals";
 
 const SetupPage = async() => {
 
+    console.log("aaas")
+
     const profile = await initialProfile()
  
     // Attempt to find any server that this user is a member of

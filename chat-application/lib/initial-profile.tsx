@@ -2,10 +2,26 @@ import { currentUser, redirectToSignIn } from "@clerk/nextjs";
 
 import { db } from "@/lib/db";
 
+import { useClerk } from "@clerk/nextjs";
+
+function LogoutButton() {
+  const { signOut } = useClerk();
+  
+  const handleLogout = () => {
+      signOut();
+    };
+    return (
+     <button onClick={handleLogout}>Logout</button>
+   );
+}
 
 export const initialProfile = async () => {
+
+
+   
 // attempt to get the user using clerk
-    const user = await currentUser()
+const user = await currentUser()
+    console.log('Current User:', user);
 
     if (!user)
     {

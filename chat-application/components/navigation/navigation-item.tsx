@@ -33,7 +33,7 @@ export const NavigationIem = ({
                 align = "center"
                 label = {name}>
              <button
-                onClick={() => {}}
+                onClick={ onClick}
                 className="group relative flex items-center">
                 <div className={cn(
                     "absolute left-0 bg-primary rounded-r-full transition-all w-[4px]",
